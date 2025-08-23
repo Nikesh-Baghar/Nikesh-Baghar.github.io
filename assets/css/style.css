@@ -105,3 +105,43 @@ a:hover {
   border-radius: 12px;
   object-fit: cover;
 }
+/* Section styling */
+section {
+  padding: 60px 20px;
+  background: #fff; /* keep cards contrast */
+  margin: 30px auto;
+  max-width: 1100px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Section headings */
+section h2, section h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #3b3b98; /* ties in with gradient */
+}
+
+/* Projects grid (if multiple cards) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Contact links */
+.contact a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3b8d99, #6b6b83, #aa4b6b);
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.contact a:hover {
+  background: linear-gradient(135deg, #6b6b83, #aa4b6b, #3b8d99);
+  color: #fff;
+}
