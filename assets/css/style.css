@@ -245,6 +245,65 @@ body {
   justify-content: center;
   align-items: center;
 }
+.cert-grid-7 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 36px 28px;
+  margin-top: 28px;
+}
+
+/* Place first four on row 1, next three on row 2 */
+.cert-grid-7 .cert-card:nth-child(n+5) {
+  grid-column: span 1;
+}
+.cert-grid-7 .cert-card:nth-child(5) { grid-row: 2; grid-column: 2; }
+.cert-grid-7 .cert-card:nth-child(6) { grid-row: 2; grid-column: 3; }
+.cert-grid-7 .cert-card:nth-child(7) { grid-row: 2; grid-column: 4; }
+
+.cert-card {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.cert-card img {
+  width: 100%;
+  max-width: 365px;
+  height: auto;
+  aspect-ratio: 1.7 / 1;
+  object-fit: contain;
+  box-shadow: 0 2px 20px rgba(67, 41, 89, 0.13);
+  border-radius: 12px;
+  background: #fff;
+  padding: 8px;
+}
+
+/* Responsive: 2 columns for tablets, 1 column for mobile */
+@media (max-width: 1100px) {
+  .cert-grid-7 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cert-card img {
+    max-width: 97vw;
+    aspect-ratio: unset;
+  }
+}
+
+@media (max-width: 700px) {
+  .cert-grid-7 {
+    grid-template-columns: 1fr;
+    grid-gap: 30px 0;
+  }
+  .cert-card img {
+    max-width: 98vw;
+  }
+}
+
+
 
 /* Contact Icons Horizontal and Large */
 .contact-icons {
